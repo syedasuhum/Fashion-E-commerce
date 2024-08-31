@@ -1,0 +1,473 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Fashion.master.cs" Inherits="fashion_Fashion" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Fashion</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" user-scalable="no" />
+     <%--<link href="bootstrap/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+     <script src="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+     <script src="bootstrap/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>--%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <link href="Fashion_StyleSheet.css" rel="stylesheet" type="text/css" />
+  <%-- <link rel="stylesheet" href="../lib/font-awesome/css/all.min.css"/>--%>
+
+   <%-- Sweet Alert--%>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <%-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>--%>
+<%--<script type="text/javascript" src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>--%>
+
+   <%-- owl Carousel--%>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<%--<script src="https://huynhhuynh.github.io/owlcarousel2-filter/dist/owlcarousel2-filter.min.js"></script>--%>
+
+<%--Slick Slider--%>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+
+
+
+<%--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">--%>
+
+     
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="bor-bot p-2">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-6 col-12">
+                 <ul class="ull d-flex">
+                   <li class="f-bor"><a href="#" class="a-list  p-1">Wish List</a></li>
+                    <li class="f-bor"><img src="./images/india.png" class="ind-flag" /><b class="inr p-1">INR</b></li>
+                    <li><img src="./images/telephone.png" class="ind-flag p-1" /><b class="inr">+123 4567 890</b></li>
+               </ul>
+            </div>
+                <div class="col-lg-6 col-md-6 col-12">
+                    <p class="float-end p-1">Free Delivery On Order $200</p>
+                </div>
+             
+             </div>
+             </div>
+            </div>
+
+        <div class="container mt-2">
+              <nav class="navbar  sticky-top  navbar-expand-lg bg-white fit-nav">
+    <div class="container-fluid">
+       
+        <a class="navbar-brand mx-4  logo  bg-white" href="#"><img src="images/logo.png" /></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            
+            <ul class="navbar-nav  bg-white" style="padding-left:10%;">
+              
+
+               <li>
+                    <div class="drop">
+  <a href="Fashion_page.aspx" class="dropbtn drop-nav drop-text" >Home </a>
+  
+</div>
+</li>
+
+<li>
+  <div class="drop">
+  <a href="Accessories.aspx"  class="dropbtn drop-nav drop-text d-flex">Accessories <i class="fa-solid fa-chevron-down fa-chev "></i></a>
+  <div class="drop-content">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+            <h6 class="fa-color p-1 ">FEUGIAT COMMODO</h6>
+            <ul class="ull list-ul">
+                <li>DictumTincidunt</li>
+                <li> DapibusBlandit</li>
+                <li> FeugiatEuismod </li>
+                <li>Aliquam</li>
+                <li>LuctusEtiam</li>
+                <li> RhoncusJackets</li>
+            </ul>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+            <h6 class="fa-color ">INTEGER HENDRERIT</h6>
+            <ul class="ull list-ul">
+                <li>QuisqueInVoluVolutpat  </li>
+                <li>RisusVitae</li>
+                <li>ElementumVacuum  </li>
+                <li>CleanersOrnare</li>
+                <li>MolestieFusce</li>
+                <li>Molestie</li>
+            </ul>
+
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+            <h7 class="p-2">BestSeller</h7>
+            <img src="images/nav1.png" class="img-fluid" />
+            <h7 class="f-para mt-3">Class aptent taciti sociosqu </h7>
+            <ul class="ull d-flex">
+                <li><i class="fa-regular fa-star f-star"></i></li>
+                <li><i class="fa-regular fa-star f-star"></i></li>
+                <li><i class="fa-regular fa-star f-star"></i></li>
+                <li><i class="fa-regular fa-star f-star"></i></li>
+                <li><i class="fa-regular fa-star f-star"></i></li>
+            </ul>
+            <p class="text-center">Rs. 1,820.00</p>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+            <img src="images/nav2.png" class="img-fluid"  />
+
+        </div>
+    </div>
+    
+  </div>
+</div>
+</li>
+               
+ <li>
+  <div class="drop">
+  <a href="Ethenic_wear.aspx" class="dropbtn drop-nav drop-text d-flex" >Ethenic wear<i class="fa-solid fa-chevron-down fa-chev "></i></a>
+  <div class="drop-content">
+     <div class="row">
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+            <h6 class="fa-color p-1 ">COMPONENTS</h6>
+            <ul class="ull list-ul">
+                <li>Lobortis Sem</li>
+                <li> Accessories</li>
+                <li>PenatibusOrnare</li>
+                <li>  Molestie</li>
+            </ul>
+
+             <h6 class="fa-color p-1 ">NATOQUE PENATIBUS</h6>
+            <ul class="ull list-ul">
+                <li>Vel Porta</li>
+                <li>  DolorTincidunt</li>
+                <li> JustoHabitant</li>
+                <li> MorbiShorts</li>
+               
+            </ul>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+           <h6 class="fa-color p-1 ">FRINGILLA URNA</h6>
+            <ul class="ull list-ul">
+                <li>Power BanksVitae </li>
+                <li> DignissimCamera</li>
+                <li> Accessories</li>
+                <li>Sed Gravida</li>
+            </ul>
+
+            <h6 class="fa-color p-1 ">DICTUM TINCIDUNT</h6>
+            <ul class="ull list-ul">
+                <li>EtiamSem</li>
+                <li> Eget Elementum</li>
+                <li>RhoncusSmart</li>
+                <li> WatchLobortis</li>
+            </ul>
+
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+            
+            <img src="images/nav3.png" class="img-fluid" />
+
+             <img src="images/nav4.png" class="img-fluid mt-2" />
+            
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+            <img src="images/nav5.png" class="img-fluid"  />
+
+        </div>
+    </div>
+    
+  </div>
+</div>
+ </li>
+
+ 
+
+<li>
+  <div class="drop">
+  <a href="Western_dress.aspx" class="dropbtn drop-nav drop-text d-flex" >Western wear <i class="fa-solid fa-chevron-down fa-chev "></i></a>
+ <div class="drop-content">
+    <div class="row">
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+            <h6 class="fa-color p-1 ">VACUUM CLEANERS</h6>
+            <ul class="ull list-ul">
+                <li>Sed Arcu</li>
+                <li>LectusFashion</li>
+                <li>Footwear</li>
+                <li> Clothing</li>
+            </ul>
+
+            
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+           <h6 class="fa-color p-1 ">QUISQUE AT TEMPUS</h6>
+            <ul class="ull list-ul">
+                <li>Watches</li>
+                <li> Sport</li>
+                <li> WearJackets</li>
+                <li> Heels</li>
+            </ul>
+
+           
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+            
+             <h6 class="fa-color p-1 ">TRISTIQUE NON</h6>
+            <ul class="ull list-ul">
+                <li>Imperdiet  Porta</li>
+                <li> TortorKitchen</li>
+                <li> ToolsGravida</li>
+                <li> FringillaUltrices</li>
+            </ul>
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+            <h6 class="fa-color p-1 ">LACINIA VITAE MASSA</h6>
+            <ul class="ull list-ul">
+                <li>Habitant</li>
+                <li>MorbiTopratedFloor</li>
+                <li>CoveringIncidunts</li>
+                <li>Blandit</li>
+            </ul>
+        </div>
+    </div>
+    
+  </div>
+</div>
+ </li>
+
+    <li>
+  <div class="drop">
+  <a class="dropbtn drop-nav drop-text d-flex" > Jewellary wear<i class="fa-solid fa-chevron-down fa-chev "></i></a>
+ <div class="drop-content">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+            <h6 class="fa-color p-1 ">VESTIBULUM EUIS</h6>
+            <ul class="ull list-ul">
+                <li>Dapibus</li>
+                <li>MaurisFinibus</li>
+                <li>Ad Litora</li>
+                <li>RhoncusSociosqu</li>
+            </ul>
+
+            
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-12 p-2">
+           <h6 class="fa-color p-1 ">CLOTHES</h6>
+            <ul class="ull list-ul">
+                <li>Ultrices Luctus</li>
+                <li>PortaScelerisque</li>
+                <li>VelitAliquam </li>
+                <li>EratEuismod</li>
+            </ul>
+
+           
+        </div>
+        <div class="col-lg-6 col-md-6 col-12 p-2">
+            <img src="images/nav6.png" class="img-fluid" />
+        </div>
+       
+    </div>
+  </div>
+</div>
+ </li>
+  
+<li>
+  <div class="drop">
+  <a class="dropbtn drop-nav drop-text d-flex"> Beauty & Gooming<i class="fa-solid fa-chevron-down fa-chev "></i></a>
+  <div class="drop-content">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-12 p-2">
+            <h6 class="fa-color p-1 ">QUISQUE AT TEMPUS</h6>
+            <ul class="ull list-ul">
+                <li>Watches</li>
+                <li> Sport</li>
+                <li> WearJackets</li>
+                <li> Heels</li>
+            </ul>
+
+            
+
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 p-2">
+            <h6 class="fa-color p-1 ">VESTIBULUM EUIS</h6>
+            <ul class="ull list-ul">
+                <li>Dapibus</li>
+                <li>MaurisFinibus</li>
+                <li>Ad Litora</li>
+                <li>RhoncusSociosqu</li>
+            </ul>
+
+           
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 p-2">
+            <h6 class="fa-color p-1 ">TRISTIQUE NON</h6>
+            <ul class="ull list-ul">
+                <li>Imperdiet  Porta</li>
+                <li> TortorKitchen</li>
+                <li> ToolsGravida</li>
+                <li> FringillaUltrices</li>
+            </ul>
+
+        </div>
+       
+    </div>
+
+      <div class="row mt-2">
+          <div class="col-lg-6 col-md-6 col-12">
+              <img src="images/nav7.png" class="img-fluid" />
+          </div>
+
+           <div class="col-lg-6 col-md-6 col-12">
+              <img src="images/nav8.png" class="img-fluid" />
+          </div>
+      </div>
+    
+  </div>
+</div>
+ </li>
+   
+ 
+              
+            </ul>
+
+
+            <div class="nav-right bg-white">
+                <ul class="ull d-flex  ">
+                    <li class=""><a href="#"><i class="fa-solid fa-search f-bag p-2" style="color:black !important"></i></a></li>
+                     <li><a href="#"><i class="fa-regular fa-circle-user p-2 f-bag"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-bag-shopping p-2 f-bag"></i></a></li>
+                   
+                </ul>
+            </div>
+           
+
+        </div>
+
+       
+
+
+    </div>
+</nav>
+        </div>
+            
+       
+    
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <footer>
+            <div class="container-fluid mt-5">
+            <div class="row fash-footer" >
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h3>Contact Us</h3>
+                    <ul class="ull">
+                        <li class="footer-li"><img src="images/location.png" class="f-img" /> <p class="f-text">Demo Store United States.</p></li>
+                         <li class="footer-li"><img src="images/phone-call.png" class="f-img" /> <p class="f-text">0123-456-789</p></li>
+                         <li class="footer-li"><img src="images/email.png" class="f-img" /> <p class="f-text">demo@demo.com</p></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h3>Product</h3>
+                    <ul class="ull">
+                        <li class="prod-li">Featured Product</li>
+                        <li  class="prod-li">Bestseller</li>
+                        <li  class="prod-li">Latest Products</li>
+                        <li  class="prod-li">Special Product</li>
+                        <li  class="prod-li">On Sale</li>
+
+                    </ul>
+                    
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                     <h3>Services</h3>
+                    <ul class="ull">
+                        <li class="prod-li">About Us</li>
+                        <li  class="prod-li">Contact Us</li>
+                        <li  class="prod-li">Information</li>
+                        <li  class="prod-li">Privacy & Policy</li>
+                        <li  class="prod-li">Terms & Condition</li>
+
+                    </ul>
+
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <h3 class="news">Newsletter</h3>
+                    <p class="f-text">You may unsubscribe at any moment. For that purpose,
+                        please find our contact info in the legal notice.</p>
+
+                    <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control f-mail" placeholder="Email Address"></asp:TextBox>
+                    <asp:Button ID="Button1" runat="server" Text="SUBSCRIBE" CssClass="subs mt-4" />
+
+
+                </div>
+            </div>
+
+            </div>
+
+            <div class="container">
+                
+                 <div class="row bg-white mt-4">
+                     <div class="col-lg-4 col-md-4 col-12 last-1">
+                         <ul class=" ull  d-flex">
+                             <li><a href="#"><i class="fa-brands fa-twitter social icons"></i></a></li>
+                              <li><a href="#"><i class="fa-brands fa-facebook-f social icons"></i></a></li>
+                              <li><a href="#"><i class="fa-brands fa-pinterest social icons"></i></a></li>
+                              <li><a href="#"><i class="fa-brands fa-instagram social icons"></i></a></li>
+                         </ul>
+
+                     </div>
+                     <div class="col-lg-4 col-md-4 col-12 text-center">
+                         <img src="images/logo.png" />
+                         <p class="f-text mt-2">Copyright © 2023, Fazena</p>
+
+                     </div>
+                     <div class="col-lg-4 col-md-4 col-12 ">
+                          <ul class=" ull  d-flex last-3">
+                             <li><a href="#"><i class="fa-brands fa-cc-mastercard icons"></i></a></li>
+                              <li><a href="#"><i class="fa-brands fa-cc-visa icons"></i></a></li>
+                              <li><a href="#"><i class="fa-regular fa-credit-card icons"></i></a></li>
+                              <li><a href="#"><i class="fa-brands fa-cc-paypal icons"></i></a></li>
+                         </ul>
+
+                     </div>
+                
+                </div>
+            </div>
+
+         
+
+           
+
+        </footer>
+    <%-- <script src="JavaScript.js"></script>--%>
+    </form>
+   
+</body>
+</html>
